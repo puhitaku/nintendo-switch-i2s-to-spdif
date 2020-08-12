@@ -1,1 +1,8 @@
 *.user
+impl/pnr/cmd.do
+impl/pnr/i2s2spdif*
+impl/synthesize/i2s2spdif.prj
+impl/synthesize/rev*
+impl/synthesize/stdout.log
+impl/synthesize/synlog.tcl
+
