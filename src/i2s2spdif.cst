@@ -1,0 +1,17 @@
+//Copyright (C)2014-2020 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: V1.9.3.02Beta
+//Part Number: GW1N-LV1QN48C6/I5
+//Created Time: Thu 08 13 05:14:02 2020
+
+IO_LOC "bclk" 29;
+IO_PORT "bclk" IO_TYPE=LVCMOS33;
+IO_LOC "lrclk" 28;
+IO_PORT "lrclk" IO_TYPE=LVCMOS33;
+IO_LOC "sdata" 27;
+IO_PORT "sdata" IO_TYPE=LVCMOS33;
+IO_LOC "out" 38;
+IO_PORT "out" IO_TYPE=LVCMOS33 DRIVE=4;
+IO_LOC "out_led" 18;
+IO_PORT "out_led" IO_TYPE=LVCMOS33 DRIVE=4;
