@@ -6,12 +6,12 @@
     <Device>gw1n1-004</Device>
     <FileList>
         <File path="src/serdes.v" type="file.verilog" enable="1"/>
-        <File path="src/spdif_open/spdif.v" type="file.verilog" enable="1"/>
-        <File path="src/spdif_open/spdif_core.v" type="file.verilog" enable="1"/>
         <File path="src/i2s2spdif.cst" type="file.cst" enable="1"/>
         <File path="src/i2s2spdif.sdc" type="file.sdc" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/pll/pll.v" type="file.verilog" enable="1"/>
         <File path="src/fifo/fifo.v" type="file.verilog" enable="1"/>
+        <File path="src/spdif/spdif.v" type="file.verilog" enable="1"/>
+        <File path="src/spdif/spdif_core.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>
