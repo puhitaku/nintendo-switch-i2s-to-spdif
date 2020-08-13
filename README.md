@@ -1,4 +1,4 @@
-# I2S to S/PDIF
+# Nintendo Switch I2S to S/PDIF
 
 I2S to S/PDIF conversion on **SiPeed Tang Nano** (GOWIN GW1N-LV1), mainly aims to convert Nintendo Switch's internal sound signal.
 
@@ -33,10 +33,7 @@ The spec of the FPGA board:
  - Board: SiPeed Tang Nano
  - FPGA: GOWIN GW1N-LV1 (LittleBee series)
 
- - This repository has an FPGA design to convert I2S format to S/PDIF format.
- - Download GOWIN EDA (free) to synthesize and program the design.
- - It supports both TOSLINK (optical) and coaxial cable as a PHY.
- - **The RGB LED on Tang Nano is capable of transmitting S/PDIF signal.** Connect a cable to a DAC and press the another side to the LED. Sound should come out. How interesting!! :nerd:
+The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB LED on Tang Nano is capable of transmitting S/PDIF signal.** Connect a cable to a DAC and press the another side on the LED. Sound should come out. How interestingis it!! :nerd_face:
 
 
 ### Step-by-step
@@ -45,33 +42,41 @@ The spec of the FPGA board:
 
 1. Find the chip.
 
- - Prepare longer wires for convenience and extra length to guide the wires nearby the battery connector.
+    - Prepare longer wires for convenience and extra length to guide the wires nearby the battery connector.
 
     <img alt="ALC5639" src="/img/alc5639.jpg" width="400px">
 
 1. Solder wires for BCLK (bit clock), LRCLK (left-right channel clock), and SDATA (serialized data)
 
- - Solder them VERY CAREFULLY or Switch lose its voice parmanently.
- - Microscope is strongly suggested.
+    - Solder them VERY CAREFULLY or Switch lose its voice parmanently.
+    - Microscope is strongly suggested.
 
     <img alt="ALC5639 with soldered wires" src="/img/soldered.jpg" width="400px">
 
 1. Guide the wires and connect with Tang Nano somehow
 
- - There is a tiny free space around the battery connector. Recommend you to guide wires here.
- - Mind your wires not to interfere with other structures.
- - Choose the pin to connect with Tang Nano as you like as most of the pins are available to use.
+    - There is a tiny free space around the battery connector. Recommend you to guide wires here.
+    - Mind your wires not to interfere with other structures.
+    - The default pin assign:
+
+    |Pin             | #|
+    |:---------------|-:|
+    |BCLK in         |29|
+    |LRCLK in        |28|
+    |SDATA in        |27|
+    |S/PDIF out      |38|
+    |S/PDIF out (LED)|18|
 
 1. Build the circuitry
 
- - Schematic is TBA
- - [Generic TTL-to-SPDIF level converter](https://sound-au.com/project85.htm) uses logic ICs for driver but we can build without the IC.
-    - Remove DC offset with a capacitor (0.1uF = 100nF is recommended)
-    - Lower the voltage with a voltage divider
-        - I've adjusted it with volumes to achieve 0.5Vpp.
-        - I'm not sure about output impedance; it works anyways!
-        - No problem with shorter cable out there but perhaps longer cable causes problem.
- - It'll be so simple with optical transmission; even the RGB LED on Tang Nano can handle it.
+    - Schematic is TBA
+    - [Generic TTL-to-SPDIF level converter](https://sound-au.com/project85.htm) uses logic ICs for driver but we can build without the IC.
+       - Remove DC offset with a capacitor (0.1uF = 100nF is recommended)
+       - Lower the voltage with a voltage divider
+           - I've adjusted it with volumes to achieve 0.5Vpp.
+           - I'm not sure about output impedance; it works anyways!
+           - No problem with shorter cable out there but perhaps longer cable causes problem.
+    - It's so simple with optical transmission; even the RGB LED on Tang Nano can handle it.
 
 1. Open this repository with GOWIN EDA and synthesize the logic design
 
