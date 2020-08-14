@@ -2,6 +2,8 @@
 
 <img alt="Overview" src="/img/overview.jpg">
 
+(Orange LED on the Chord Mojo indicates that it's receiving 48kHz digital sound.)
+
 I2S to S/PDIF conversion on **SiPeed Tang Nano** (GOWIN GW1N-LV1), mainly aims to convert Nintendo Switch's internal sound signal.
 
 
@@ -35,7 +37,7 @@ The spec of the FPGA board:
  - Board: SiPeed Tang Nano
  - FPGA: GOWIN GW1N-LV1 (LittleBee series)
 
-The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB LED on Tang Nano is capable of transmitting S/PDIF signal.** Connect a cable to a DAC and press the another side on the LED. Sound should come out. How interestingis it!! :nerd_face:
+The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB LED on Tang Nano is capable of transmitting S/PDIF signal.** Connect a cable to a DAC and press the another side on the LED. Sound should come out. How interesting is it! :nerd_face:
 
 
 ### Step-by-step
@@ -71,14 +73,17 @@ The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB L
 
 1. Build the circuitry
 
-    - Schematic is TBA
+    <img alt="Breadboard" src="/img/breadboard.jpg" width="400px">
+
+    - The schematic is TBA
+    - By default, the output signal comes out from the pin 38 (for coaxial) and the red LED (for optical / TOSLINK).
+    - You can try the optical transmission with NO EXTERNAL PARTS.
     - [Generic TTL-to-SPDIF level converter](https://sound-au.com/project85.htm) uses logic ICs for driver but we can build without the IC.
        - Remove DC offset with a capacitor (0.1uF = 100nF is recommended)
        - Lower the voltage with a voltage divider
            - I've adjusted it with volumes to achieve 0.5Vpp.
            - I'm not sure about output impedance; it works anyways!
            - No problem with shorter cable out there but perhaps longer cable causes problem.
-    - It's so simple with optical transmission; even the RGB LED on Tang Nano can handle it.
 
 1. Open this repository with GOWIN EDA and synthesize the logic design
 
