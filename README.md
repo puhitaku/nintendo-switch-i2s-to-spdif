@@ -1,5 +1,7 @@
 # Nintendo Switch I2S to S/PDIF
 
+<img alt="Overview" src="/img/overview.jpg">
+
 I2S to S/PDIF conversion on **SiPeed Tang Nano** (GOWIN GW1N-LV1), mainly aims to convert Nintendo Switch's internal sound signal.
 
 
