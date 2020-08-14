@@ -85,7 +85,13 @@ The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB L
            - I'm not sure about output impedance; it works anyways!
            - No problem with shorter cable out there but perhaps longer cable causes problem.
 
-1. Open this repository with GOWIN EDA and synthesize the logic design
+1. Open this repository with GOWIN EDA
+
+1. Run "Synthesize" in the "Process" tab.
+
+1. Run "Place & Route".
+
+1. Program the board with "Program Device". The bitstream should be in "nintendo-switch-i2s-to-spdif/impl/pnr/i2s2spdif.fs".
 
 1. BOOM!
 
