@@ -59,6 +59,8 @@ The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB L
 
 1. Guide the wires and connect with Tang Nano somehow
 
+    <img alt="Guide the wires" src="/img/wire_guide.jpg" width="400px">
+
     - There is a tiny free space around the battery connector. Recommend you to guide wires here.
     - Mind your wires not to interfere with other structures.
     - The default pin assign:
