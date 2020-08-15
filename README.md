@@ -42,7 +42,7 @@ The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB L
 
 ### Step-by-step
 
-1. Disassembly your Switch. [-> iFixit teardown](https://www.ifixit.com/Teardown/Nintendo+Switch+Teardown/78263)
+1. Disassemble your Switch. [-> iFixit teardown](https://www.ifixit.com/Teardown/Nintendo+Switch+Teardown/78263)
 
 1. Find the chip.
 
@@ -50,9 +50,9 @@ The protocol of TOSLINK (optical) and coaxial cable (metal) is same. **The RGB L
 
     <img alt="ALC5639" src="/img/alc5639.jpg" width="400px">
 
-1. Solder wires for BCLK (bit clock), LRCLK (left-right channel clock), and SDATA (serialized data)
+1. Solder wires for BCLK (bit clock), LRCLK (left-right channel clock), SDATA (serialized data), and the ground.
 
-    - Solder them VERY CAREFULLY or Switch lose its voice parmanently.
+    - Solder them VERY CAREFULLY or Switch will lose its voice parmanently.
     - Microscope is strongly suggested.
 
     <img alt="ALC5639 with soldered wires" src="/img/soldered.jpg" width="400px">
